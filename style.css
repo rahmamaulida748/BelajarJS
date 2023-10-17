@@ -1,0 +1,46 @@
+*{
+    margin-right: 10px;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.delete-button {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.task-text {
+    word-break: break-all;
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+

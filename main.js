@@ -4,65 +4,30 @@
 
 // var Promnet = "Coding is Easy"
 // console.log(Promnet)
-// var Promnet = "coding not Easy"
+// var Promnet = "Coding is not Easy"
 // console.log(Promnet)
 
-// let letPromnet = "Coding is Easy"
+// let Promnet = "Coding is Easy"
 // console.log(Promnet)
-// Promnet = "Coding not Easy"
-// console.log(Promnet)
-
-// const Promnet = "Coding is Easy"
-// console.log(Promnet)
-// Promnet = "Coding not easy"
+// Promnet = "Coding is not Easy"
 // console.log(Promnet)
 
-// let totalPoin = prompt ("<h1>Masukkan Poin Anda<h1>")
+// cont Promnet = "Coding is Easy"
+// console.log(Promnet)
+// cont Promnet = "Coding is not Easy"
+// console.log(Promnet)
+
+// let totalPoin = prompt ("Masukkan Poin Anda")
 //     if(totalPoin > 100) {
-//         document.write ("<h1>Congtulation<h1>");
+//         document.write ("Congtulation");
 //     }
 //     else {
 //         document.write("Thank You");
 //     }
 
-// var x = 6;
-// var y = 3;
 
-// var a = (x < 10 && y > 1);
-// var b = (x < 10 && y < 1);
-// var c = (x == 5 || y == 5);
-// var d = (x == 6 || y == 5);
-// var e = !(x == y);
+// 
 
-// if (a) {
-//     console.log("a: True");
-// } else {
-//     console.log("a: False");
-// }
-
-// if (b) {
-//     console.log("b: True");
-// } else {
-//     console.log("b: False");
-// }
-
-// if (c) {
-//     console.log("c: True");
-// } else {
-//     console.log("c: False");
-// }
-
-// if (d) {
-//     console.log("d: True");
-// } else {
-//     console.log("d: False");
-// }
-
-// if (e) {
-//     console.log("e: True");
-// } else {
-//     console.log("e: False");
-// }
 
 
 // let p = document.querySelector("p")
@@ -74,4 +39,55 @@
 //     console.log(isi)
 //     p.innerHTML = isi
 // })
+
+function tambahTugas() {
+    const taskText = document.getElementById("task").value;
+
+    if (taskText.trim() === "") {
+        return;
+    }
+
+    const taskList = document.getElementById("daftarTugas");
+
+    const listItem = document.createElement("li");
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.classList.add("checkbox");
+    const taskSpan = document.createElement("span");
+    taskSpan.innerText = taskText;
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "X";
+    deleteButton.classList.add("delete-button");
+    taskSpan.classList.add("task-text");
+
+    // Event listener untuk menandai/mencoret tugas
+    checkBox.addEventListener("change", function () {
+        if (checkBox.checked) {
+            taskSpan.style.textDecoration = "line-through";
+        } else {
+            taskSpan.style.textDecoration = "none";
+        }
+    });
+
+    
+    deleteButton.addEventListener("click", function () {
+        taskList.removeChild(listItem);
+    });
+
+    listItem.appendChild(checkBox);
+    listItem.appendChild(taskSpan);
+    listItem.appendChild(deleteButton);
+    taskList.appendChild(listItem);
+
+    document.getElementById("task").value = "";
+}
+
+
+
+
+
+
+
+  
+
 
